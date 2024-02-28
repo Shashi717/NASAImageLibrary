@@ -38,7 +38,7 @@ class ImageCollectionViewModel {
                 delegate?.didUpdate()
             } catch {
                 // log error
-                NSLog("Error loading media collection for query: \(query), error: \(error.localizedDescription)")
+                NSLog("Error loading media collection for query: \(query), error: \(error)")
             }
         }
     }
@@ -61,7 +61,7 @@ class ImageCollectionViewModel {
                 delegate?.didUpdate()
             } catch {
                 // log error
-                NSLog("Error loading next page for url: \(nextPageURLString), error: \(error.localizedDescription)")
+                NSLog("Error loading next page for url: \(nextPageURLString), error: \(error)")
             }
         }
     }

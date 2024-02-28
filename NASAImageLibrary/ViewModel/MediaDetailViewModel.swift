@@ -56,7 +56,7 @@ class MediaDetailViewModel {
                 delegate?.didUpdate()
             } catch {
                 // log error
-                NSLog("Error loading full image for media id: \(mediaData.id), error: \(error.localizedDescription)")
+                NSLog("Error loading full image for media id: \(mediaData.id), error: \(error)")
             }
         }
     }
