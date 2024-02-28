@@ -2,10 +2,11 @@
 
 ### If I had more time I'll
 - add tests for data decoding, view models
-- fix the scrolling issue when loading next page
-- add more UI refinements
 - add support for Light and Dark modes
+- search by location and photographer
+- fix the scrolling issue when loading next page
 - better performant network calls
+- add more UI refinements
 
 ### I placed the emphasis on
 - network calls and data models
