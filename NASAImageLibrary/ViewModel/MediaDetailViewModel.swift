@@ -51,8 +51,13 @@ class MediaDetailViewModel {
             return
         }
         Task {
-            fullImage = try await apiClient.fetchImage(url)
-            delegate?.didUpdate()
+            do {
+                fullImage = try await apiClient.fetchImage(url)
+                delegate?.didUpdate()
+            } catch {
+                // log error
+                NSLog("Error loading full image for media id: \(mediaData.id), error: \(error.localizedDescription)")
+            }
         }
     }
 
@@ -60,8 +65,13 @@ class MediaDetailViewModel {
         guard let url = thumnailURLString else {
             return
         }
-        thumbnail = try await apiClient.fetchImage(url)
-        delegate?.didUpdate()
+        do {
+            thumbnail = try await apiClient.fetchImage(url)
+            delegate?.didUpdate()
+        } catch {
+            // log error
+            NSLog("Error loading thumbnail image for media id: \(mediaData.id), error: \(error.localizedDescription)")
+        }
     }
 
     func loadMediaDetail() async throws {

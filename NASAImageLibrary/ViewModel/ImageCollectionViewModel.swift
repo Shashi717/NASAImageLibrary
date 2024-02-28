@@ -25,16 +25,21 @@ class ImageCollectionViewModel {
 
     func loadMediaItems(_ query: String) {
         Task {
-            let mediaCollection = try await apiClient.fetchMediaCollection(for: query)
-            let collectionItems = mediaCollection.items
-            // find the url for the next page
-            let link: Link? = mediaCollection.links.first(where: { link in
-                link.rel == "next"
-            })
-            nextPage = link?.href
-            // set the items if it's a new query
-            self.items = await loadMediaItems(collectionItems)
-            delegate?.didUpdate()
+            do {
+                let mediaCollection = try await apiClient.fetchMediaCollection(for: query)
+                let collectionItems = mediaCollection.items
+                // find the url for the next page
+                let link: Link? = mediaCollection.links.first(where: { link in
+                    link.rel == "next"
+                })
+                nextPage = link?.href
+                // set the items if it's a new query
+                self.items = await loadMediaItems(collectionItems)
+                delegate?.didUpdate()
+            } catch {
+                // log error
+                NSLog("Error loading media collection for query: \(query), error: \(error.localizedDescription)")
+            }
         }
     }
 
@@ -43,16 +48,21 @@ class ImageCollectionViewModel {
             return
         }
         Task {
-            let mediaCollection = try await apiClient.fetchMediaCollectionNextPage(nextPageURLString)
-            let collectionItems = mediaCollection.items
-            // find the url for the next page
-            let link: Link? = mediaCollection.links.first(where: { link in
-                link.rel == "next"
-            })
-            nextPage = link?.href
-            // append to current items if we're loading items from next page
-            self.items.append(contentsOf: await loadMediaItems(collectionItems))
-            delegate?.didUpdate()
+            do {
+                let mediaCollection = try await apiClient.fetchMediaCollectionNextPage(nextPageURLString)
+                let collectionItems = mediaCollection.items
+                // find the url for the next page
+                let link: Link? = mediaCollection.links.first(where: { link in
+                    link.rel == "next"
+                })
+                nextPage = link?.href
+                // append to current items if we're loading items from next page
+                self.items.append(contentsOf: await loadMediaItems(collectionItems))
+                delegate?.didUpdate()
+            } catch {
+                // log error
+                NSLog("Error loading next page for url: \(nextPageURLString), error: \(error.localizedDescription)")
+            }
         }
     }
 

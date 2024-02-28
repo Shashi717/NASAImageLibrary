@@ -7,6 +7,7 @@
 - fix the scrolling issue when loading next page
 - better performant network calls
 - add more UI refinements
+- add better error handling - ex. alert controller, errors to reflex response codes, localized desciptions
 
 ### I placed the emphasis on
 - network calls and data models
