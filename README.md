@@ -5,6 +5,7 @@
 - fix the scrolling issue when loading next page
 - add more UI refinements
 - add support for Light and Dark modes
+- better performant network calls
 
 ### I placed the emphasis on
 - network calls and data models
@@ -12,4 +13,4 @@
 - code quality
 
 ### Notes
-- the NASA endpoint was very flaky - sometimes it would give errors for the network call
+- The NASA endpoint is very flaky - sometimes it would give errors for the network call
