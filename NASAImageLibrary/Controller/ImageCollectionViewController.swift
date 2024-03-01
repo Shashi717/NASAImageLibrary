@@ -26,8 +26,8 @@ class ImageCollectionViewController: UIViewController {
         collectionViewLayout.itemSize = CGSize(width: 100, height: 100)
         mediaCollectionView.collectionViewLayout = collectionViewLayout
 
-        // load the initial items with a query "earth"
-        imageCollectionViewModel.loadMediaItems("earth")
+        // load the initial items without a query
+        imageCollectionViewModel.loadMediaItems()
     }
 }
 
@@ -39,6 +39,7 @@ extension ImageCollectionViewController: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageViewCell", for: indexPath) as? ImageViewCell, indexPath.row < imageCollectionViewModel.items.count {
             let mediaDetailViewModel = imageCollectionViewModel.items[indexPath.row]
+            cell.viewModel = mediaDetailViewModel
             cell.imageView.image = mediaDetailViewModel.thumbnail
             return cell
         }

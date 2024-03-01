@@ -53,11 +53,11 @@ class MediaDetailViewModel {
         Task {
             do {
                 fullImage = try await apiClient.fetchImage(url)
-                delegate?.didUpdate()
             } catch {
                 // log error
                 NSLog("Error loading full image for media id: \(mediaData.id), error: \(error)")
             }
+            delegate?.didUpdate()
         }
     }
 
@@ -67,11 +67,11 @@ class MediaDetailViewModel {
         }
         do {
             thumbnail = try await apiClient.fetchImage(url)
-            delegate?.didUpdate()
         } catch {
             // log error
             NSLog("Error loading thumbnail image for media id: \(mediaData.id), error: \(error.localizedDescription)")
         }
+        delegate?.didUpdate()
     }
 
     func loadMediaDetail() async throws {

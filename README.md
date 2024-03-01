@@ -2,9 +2,9 @@
 
 ### If I had more time I'll
 - add tests for data decoding, view models
-- search by location and photographer
 - add more UI refinements
 - add better error handling - ex. alert controller, errors to reflex http response codes, localized desciptions
+- add debouncing logic for network requests
 
 ### I placed the emphasis on
 - network calls and data models

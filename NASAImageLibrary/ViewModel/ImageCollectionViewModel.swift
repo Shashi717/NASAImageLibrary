@@ -12,6 +12,8 @@ protocol ImageCollectionViewModelDelegate: AnyObject {
 }
 
 class ImageCollectionViewModel {
+    private static let defaultQuery = "earth"
+
     private let apiClient: APIClient
 
     var items: [MediaDetailViewModel] = []
@@ -25,13 +27,20 @@ class ImageCollectionViewModel {
 
     private var currentTask: Task<Void, Error>?
 
-    func loadMediaItems(_ query: String) {
+    func loadMediaItems(_ query: String? = nil) {
+        let mediaQuery: String
+        if let query = query, !query.isEmpty {
+            mediaQuery = query
+        } else {
+            // set the media query to default query if it's nil or empty
+            mediaQuery = Self.defaultQuery
+        }
         // if we are loading the items from a query, we can cancel the current running
         // task because it's a new search
         currentTask?.cancel()
         currentTask = Task {
             do {
-                let mediaCollection = try await apiClient.fetchMediaCollection(for: query)
+                let mediaCollection = try await apiClient.fetchMediaCollection(for: mediaQuery)
                 let collectionItems = mediaCollection.items
                 setNextPage(for: mediaCollection)
                 // set the items if it's a new query
@@ -41,10 +50,11 @@ class ImageCollectionViewModel {
                 delegate?.didUpdate()
             } catch {
                 // log error
-                NSLog("Error loading media collection for query: \(query), error: \(error)")
+                NSLog("Error loading media collection for query: \(mediaQuery), error: \(error)")
                 // cancel the current task and set to nil if there's an error
                 currentTask?.cancel()
                 currentTask = nil
+                delegate?.didUpdate()
             }
         }
     }
@@ -72,6 +82,7 @@ class ImageCollectionViewModel {
                 // cancel the current task and set to nil if there's an error
                 currentTask?.cancel()
                 currentTask = nil
+                delegate?.didUpdate()
             }
         }
     }

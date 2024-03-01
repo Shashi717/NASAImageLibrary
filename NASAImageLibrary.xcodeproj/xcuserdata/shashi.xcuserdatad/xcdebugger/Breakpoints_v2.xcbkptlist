@@ -3,4 +3,161 @@
    uuid = "97BE80C3-8053-413D-A038-16CE060E2D00"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "112136B6-F708-4009-B260-240AC2150906"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "loadNextPage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "112136B6-F708-4009-B260-240AC2150906 - 129dc79a407aa8f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NASAImageLibrary.ImageCollectionViewModel.loadNextPage() -&gt; ()"
+                  moduleName = "NASAImageLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shashi/Documents/GitHub/NASAImageLibrary/NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "112136B6-F708-4009-B260-240AC2150906 - 5ddcd9dc6f834ad5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in NASAImageLibrary.ImageCollectionViewModel.loadNextPage() -&gt; ()"
+                  moduleName = "NASAImageLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shashi/Documents/GitHub/NASAImageLibrary/NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "112136B6-F708-4009-B260-240AC2150906 - 6aeb5e728e9354f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NASAImageLibrary.ImageCollectionViewModel.loadNextPage() -&gt; ()"
+                  moduleName = "NASAImageLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shashi/Documents/GitHub/NASAImageLibrary/NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "112136B6-F708-4009-B260-240AC2150906 - 451f791ec419def6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NASAImageLibrary.ImageCollectionViewModel.loadNextPage() -&gt; ()"
+                  moduleName = "NASAImageLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shashi/Documents/GitHub/NASAImageLibrary/NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "112136B6-F708-4009-B260-240AC2150906 - cefab2a95ec0318"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NASAImageLibrary.ImageCollectionViewModel.loadNextPage() -&gt; ()"
+                  moduleName = "NASAImageLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shashi/Documents/GitHub/NASAImageLibrary/NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "112136B6-F708-4009-B260-240AC2150906 - d4b28be3e717d488"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async -&gt; () in NASAImageLibrary.ImageCollectionViewModel.loadNextPage() -&gt; ()"
+                  moduleName = "NASAImageLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shashi/Documents/GitHub/NASAImageLibrary/NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "112136B6-F708-4009-B260-240AC2150906 - 129dc79a407aa8d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NASAImageLibrary.ImageCollectionViewModel.loadNextPage() -&gt; ()"
+                  moduleName = "NASAImageLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shashi/Documents/GitHub/NASAImageLibrary/NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7EA903F-D58D-434F-91AF-6D6305465988"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NASAImageLibrary/Controller/ImageCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "searchBar(_:textDidChange:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A005BCE-C9DC-4AE3-BFF0-B8AFB6C8DB91"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NASAImageLibrary/ViewModel/ImageCollectionViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadMediaItems(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
